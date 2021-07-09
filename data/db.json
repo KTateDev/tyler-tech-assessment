@@ -1,0 +1,143 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "lastName": "Wells",
+      "firstName": "jeffery",
+      "role": "Director",
+      "isManager": "true",
+      "employeesThatReport": [
+        {
+          "id": 2,
+          "lastName": "Atkins",
+          "firstName": "Victor",
+          "role": "Director",
+          "isManager": "true"
+        },
+        {
+          "id": 3,
+          "lastName": "Hamilton",
+          "firstName": "Kelli",
+          "role": "Director",
+          "isManager": "true"
+        },
+        {
+          "id": 4,
+          "lastName": "Braun",
+          "firstName": "Adam",
+          "role": "IT, Support",
+          "isManager": "false"
+        },
+        {
+          "id": 5,
+          "lastName": "Cruz",
+          "firstName": "Brian",
+          "role": "Accounting",
+          "isManager": "false"
+        },
+        {
+          "id": 6,
+          "lastName": "Floyd",
+          "firstName": "Kristen",
+          "role": "Sales",
+          "isManager": "false"
+        },
+        {
+          "id": 7,
+          "lastName": "Martinez",
+          "firstName": "Lois",
+          "role": "Support",
+          "isManager": "false"
+        },
+        {
+          "id": 8,
+          "lastName": "Lind",
+          "firstName": "Michael",
+          "role": "Analyst",
+          "isManager": "false"
+        },
+        {
+          "id": 9,
+          "lastName": "Bay",
+          "firstName": "Eric",
+          "role": "IT, Sales",
+          "isManager": "false"
+        },
+        {
+          "id": 10,
+          "lastName": "Young",
+          "firstName": "Brandon",
+          "role": "Accounting",
+          "isManager": "false"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "lastName": "Atkins",
+      "firstName": "Victor",
+      "role": "Director",
+      "isManager": "true",
+      "employeesThatReport": [
+        {
+          "id": 4,
+          "lastName": "Braun",
+          "firstName": "Adam",
+          "role": "IT, Support",
+          "isManager": "false"
+        },
+        {
+          "id": 5,
+          "lastName": "Cruz",
+          "firstName": "Brian",
+          "role": "Accounting",
+          "isManager": "false"
+        },
+        {
+          "id": 6,
+          "lastName": "Floyd",
+          "firstName": "Kristen",
+          "role": "Sales",
+          "isManager": "false"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "lastName": "Hamilton",
+      "firstName": "Kelli",
+      "role": "Director",
+      "isManager": "true",
+      "employeesThatReport": [
+        {
+          "id": 7,
+          "lastName": "Martinez",
+          "firstName": "Lois",
+          "role": "Support",
+          "isManager": "false"
+        },
+        {
+          "id": 8,
+          "lastName": "Lind",
+          "firstName": "Michael",
+          "role": "Analyst",
+          "isManager": "false"
+        },
+        {
+          "id": 9,
+          "lastName": "Bay",
+          "firstName": "Eric",
+          "role": "IT, Sales",
+          "isManager": "false"
+        },
+        {
+          "id": 10,
+          "lastName": "Young",
+          "firstName": "Brandon",
+          "role": "Accounting",
+          "isManager": "false"
+        }
+      ]
+    }
+  ]
+}
