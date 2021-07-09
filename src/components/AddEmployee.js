@@ -34,27 +34,27 @@ const AddEmployee = (props) => {
     console.log(e.target.value);
   };
 
-  <span className="manager">Manager:</span>;
-
-  {
-    props.employees ? (
-      <select onChange={handleChange} className="manager-dropdown">
-        {props.employees.map((employee) => (
-          <option value={employee.id}>
-            {`${employee.firstName} 
-                ${employee.lastName}`}
-          </option>
-        ))}
-      </select>
-    ) : (
-      <select>
-        <option value=""></option>
-      </select>
-    );
-  }
-
   return (
-    <div>
+    <div className="add-employee-container">
+      <span className="manager">Manager:</span>
+      {props.employees ? (
+        <select
+          className="add-emp-manager-dropdown"
+          onChange={handleChange}
+          name="Manager"
+        >
+          {props.employees.map((employee) => (
+            <option value={employee.id}>
+              {`${employee.firstName} 
+          ${employee.lastName}`}
+            </option>
+          ))}
+        </select>
+      ) : (
+        <select>
+          <option value=""></option>
+        </select>
+      )}
       <div className="add-employee-container">
         <form onSubmit={handleSubmit} className="add-employee-form">
           <label htmlFor="name">
@@ -115,11 +115,11 @@ const AddEmployee = (props) => {
           <input type="button" value="cancel" className="add-employee-btn" />
         </form>
       </div>
-      <p>{id}</p>
+      {/* <p>{id}</p>
       <p>{lastName}</p>
       <p>{firstName}</p>
       <p>{role}</p>
-      console.log({id});
+      console.log({id}); */}
     </div>
   );
 };

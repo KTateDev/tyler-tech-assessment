@@ -132,7 +132,7 @@ table {
 textarea {
   position: relative;
   left: 1.5rem;
-  width: 16.5%;
+  width: 20%;
   padding: 5rem;
   border: 1px solid #ccc;
   overflow-y: scroll;
@@ -152,4 +152,16 @@ textarea {
   margin: 1.5rem;
   position: relative;
   left: 3.75rem;
+}
+
+.add-employee-container {
+  margin-top: 5rem;
+}
+
+.add-emp-manager-dropdown {
+  font-size: 1rem;
+  max-width: 30%;
+  min-width: 30%;
+  margin-bottom: 1rem;
+  height: 2rem;
 }

@@ -58,28 +58,10 @@ const ViewEmployee = (props) => {
         options={manager}
         onChange={handleChange}
       /> */}
-      <span className="manager">Manager:</span>
-      {employees ? (
-        <select
-          className="manager-dropdown"
-          onChange={handleChange}
-          name="Manager"
-        >
-          {employees.map((employee) => (
-            <option value={employee.id}>
-              {`${employee.firstName} 
-                ${employee.lastName}`}
-            </option>
-          ))}
-        </select>
-      ) : (
-        <select>
-          <option value=""></option>
-        </select>
-      )}
       {/* console.log({selectedValue}); */}
       <br />
       {/* <pre>{JSON.stringify(selectedValue, null, 2)}</pre> */}
+      {/*
       <table className="view-employees">
         <tr>
           <th>Employee ID</th>
@@ -160,7 +142,7 @@ const ViewEmployee = (props) => {
                       <td></td>
                     </tr>
                   ) : (
-                    "")} */}
+                    "")} 
               </tr>
             ));
           })
@@ -171,16 +153,34 @@ const ViewEmployee = (props) => {
             <td></td>
           </tr>
         )}
-      </table>
-
+      </table> */}
       {/* <button className="add-employee" onClick={handleClick}>
         Add Employee
       </button> */}
-      <Table />
 
-      <AddEmloyee
+      {viewAddForm === true ? (
+        <AddEmloyee
+          AddEmployee={(employeeAdded) => setEmployeeAdded(employeeAdded)}
+          employees={employees}
+        />
+      ) : (
+        <Table viewAddEmpForm={(viewAddForm) => setViewAddForm(viewAddForm)} />
+      )}
+
+      {/* 
+      <Table viewAddEmpForm={(viewAddForm) => setViewAddForm(viewAddForm)} />
+      {console.log(`view add form : ${viewAddForm}`)} */}
+
+      {employeeAdded === true ? (
+        <Table viewAddEmpForm={(viewAddForm) => setViewAddForm(viewAddForm)} />
+      ) : (
+        <span></span>
+      )}
+
+      {/* <AddEmloyee
         AddEmployee={(employeeAdded) => setEmployeeAdded(employeeAdded)}
-      />
+        employees={employees}
+      /> */}
       {console.log(`employee added? : ${employeeAdded}`)}
     </div>
   );

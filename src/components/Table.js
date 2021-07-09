@@ -29,7 +29,7 @@ const Table = (props) => {
   };
 
   const handleClick = (e) => {
-    setViewAddForm(true);
+    props.viewAddEmpForm(true);
   };
 
   const reportingEmp = [];
@@ -39,11 +39,6 @@ const Table = (props) => {
       <h1>Tyler Tech</h1>
       <span className="manager">Manager:</span>
 
-      {/* <Select
-        value={manager.find((x) => x.value === selectedValue)}
-        options={manager}
-        onChange={handleChange}
-      /> */}
       <>
         {employees ? (
           <select onChange={handleChange} className="manager-dropdown">
@@ -124,7 +119,10 @@ const Table = (props) => {
           )}
         </table>
       </>
-      <button className="add-employee" onClick={handleClick}>
+      <button
+        className="add-employee"
+        onClick={() => props.viewAddEmpForm(true)}
+      >
         Add Employee
       </button>
     </div>
